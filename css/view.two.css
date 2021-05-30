@@ -1,6 +1,6 @@
 :root {
-    --bird: url("/QBRAIN.github.io/icons/bird.svg");
-    --angel-wings: url("/QBRAIN.github.io/icons/angel-wings.svg");
+    --bird: url("bird.svg");
+    --angel-wings: url("angel-wings.svg");
 }
 
 .view.two {
