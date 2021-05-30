@@ -1,0 +1,142 @@
+:root {
+    --blue: rgb(0, 145, 234);
+    --chocolate: rgb(93, 64, 55);
+    --pink: #D81B60;
+    --dark-pink: #e91e63;
+    --darker-pink: #c2185b;
+    --hearts: url("/www/icons/hearts.svg");
+    --ribbon: url("/www/icons/ribbon.svg");
+    --default-font: plex-sans,Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  
+}
+
+body {
+ --default-font: plex-sans,Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  
+    margin: 0;
+}
+
+#player {
+  position: absolute;
+  z-index: 10;
+}
+
+.container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-family: var(--default-font)
+}
+
+.splash, .view {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--chocolate);
+    
+}
+
+.view {
+    display: none;
+}
+
+.splash[render = "true"], .view[render = "true"] {
+    display: flex;
+    transition-duration: 800ms;
+    transition-timing-function: ease-in-out;
+}
+
+.splash[render = "false"] , .view[render = "false"] {
+    display: none;
+    transition-duration: 800ms;
+    transition-timing-function: ease-in-out;
+}
+
+.open {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 550;
+    cursor: pointer;
+    background-color: var(--dark-pink);
+    box-shadow: var(--shadow-header);
+    border-radius: 50px;
+    position: absolute;
+    bottom: 100px;
+}
+.splash .box {
+    display: flex;
+    width: 300px;
+    height: 300px;
+}
+
+.splash .box .header {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash .box .header .ribbon {
+    width: 250px;
+    height: 250px;
+    background-size: 250px;
+    background-position: center;
+    background-image: var(--ribbon);
+    position: relative;
+    z-index: 5;
+    left: 0px;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    background-repeat: no-repeat;
+}
+
+.splash .box .header .name {
+   
+    bottom: -25px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    width: 200px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+}
+
+.splash .box .band {
+    top: -200px;
+    width: 80px;
+    left: 150px;
+    height: 1000px;
+    position: absolute;
+    background-color: var(--darker-pink);
+    transform: rotate(45deg);
+    
+}
+
+.splash .box .heart {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    background-size: 100px;
+    background-position: center;
+    background-image: var(--hearts);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    background-repeat: no-repeat;
+}
